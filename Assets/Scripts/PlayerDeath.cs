@@ -6,9 +6,9 @@ public class PlayerDeath : MonoBehaviour
     
     void OnCollisionEnter(Collision enemyhit)
     {
-        if (enemyhit.collider.tag == "Bird")
+        if (enemyhit.collider.tag == "Player")  //DEATH CHECK WORKING JUST need to add Video
         {
-            Debug.Log("CHECK SCM PLASTIC");
+            Debug.Log("Death Check");
         }    
     }
 }
