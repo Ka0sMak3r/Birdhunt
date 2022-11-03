@@ -10,6 +10,7 @@ public class GameStart : MonoBehaviour
     public spawner spawn;
     private float delay=5f;
     private bool ActivateTimer = false;
+    public AudioSource audioSource;
 
      private void Update() //Delay function to spawn enemies
      {
@@ -28,9 +29,10 @@ public class GameStart : MonoBehaviour
     {
         
        
-        if (ON.gameObject.tag == "Player")
+        if (ON.gameObject.tag == "Player" && !audioSource.isPlaying)
         {
             ActivateTimer = true;
+            audioSource.Play();
             GetComponent<Collider>().enabled = false; //Stops the spawn trigger after triggering it once
         }
     }
