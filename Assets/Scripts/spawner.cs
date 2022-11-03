@@ -6,9 +6,9 @@ public class spawner : MonoBehaviour
 {
     public Transform[] spawn;
     public GameObject bfab;
-    public float timer;
-    public bool ActivateSpawn=false;
-    public bool doonce=false;
+    private float timer;
+    private bool ActivateSpawn=false;
+    private bool doonce=false;
 
     public void Update() //Timer Function to activate 4 enemies after 5 seconds
     {
