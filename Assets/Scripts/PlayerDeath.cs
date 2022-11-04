@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
-{
+{   
     
     void OnCollisionEnter(Collision enemyhit)
     {

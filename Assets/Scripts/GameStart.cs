@@ -32,7 +32,7 @@ public class GameStart : MonoBehaviour
         if (ON.gameObject.tag == "Player" && !audioSource.isPlaying)
         {
             ActivateTimer = true;
-            audioSource.Play();
+            audioSource.Play(); //Plays music after entering the game arena
             GetComponent<Collider>().enabled = false; //Stops the spawn trigger after triggering it once
         }
     }

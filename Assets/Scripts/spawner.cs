@@ -37,7 +37,7 @@ public class spawner : MonoBehaviour
             if (doonce)    //Checks if the spawn is activated, if not, activates the spawn
             {
 
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 4; ++i)
                 {
                     int randomNumber = Mathf.RoundToInt(Random.Range(0f, spawn.Length - 1));//chooses random spawn to spawn enemies
                     Instantiate(bfab, spawn[randomNumber].transform.position, Quaternion.identity);//enemy spawner
