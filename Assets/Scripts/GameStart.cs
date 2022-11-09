@@ -33,8 +33,8 @@ public class GameStart : MonoBehaviour
         {
             ActivateTimer = true;
             audioSource.Play(); //Plays music after entering the game arena
+            audioSource.volume = 0.2f;
             GetComponent<Collider>().enabled = false; //Stops the spawn trigger after triggering it once
         }
     }
-    
 }
