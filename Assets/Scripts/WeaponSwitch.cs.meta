@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 2ebd6682a0228274597fa8b08427911c
+guid: 6d3fa71c2dda5bc44aea9a38964f42d3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - target: {instanceID: 0}
-  - myTransform: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
