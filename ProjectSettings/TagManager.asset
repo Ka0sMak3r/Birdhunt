@@ -7,11 +7,12 @@ TagManager:
   - CinemachineTarget
   - SpawnPoint
   - Birds
+  - DoorButton
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interaction
   - Water
   - UI
   - 
