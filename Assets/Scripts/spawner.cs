@@ -19,14 +19,14 @@ public class spawner : MonoBehaviour
             {
                 doonce = true;
                 enemySpawn();
-                timer = 5;
+                timer = 10;
 
             }
         }
     }
-    public void enemySpawn()   //Spawns 4 enemy at random location which shuffles between different spawn points
+    public void enemySpawn()   //Spawns 4 enemy at random location which shuffles between different spawn points - https://www.youtube.com/watch?v=NWNH9XRtuIc
     {
-        if (!ActivateSpawn) //checks if the Spawn is not active, if not active, spawns enemies
+        if (!ActivateSpawn) //checks if the Spawn is not active, if not active, spawns enemies - https://answers.unity.com/questions/52683/how-i-can-call-a-function-once-on-the-update-funct.html
         {
             int randomNumber = Mathf.RoundToInt(Random.Range(0f, spawn.Length - 1)); //chooses random spawn to spawn enemies
             Instantiate(bfab, spawn[randomNumber].transform.position, Quaternion.identity); //enemy spawner
@@ -37,7 +37,7 @@ public class spawner : MonoBehaviour
             if (doonce)    //Checks if the spawn is activated, if not, activates the spawn
             {
 
-                for (int i = 0; i < 4; ++i)
+                for (int i = 0; i < 3; ++i)
                 {
                     int randomNumber = Mathf.RoundToInt(Random.Range(0f, spawn.Length - 1));//chooses random spawn to spawn enemies
                     Instantiate(bfab, spawn[randomNumber].transform.position, Quaternion.identity);//enemy spawner

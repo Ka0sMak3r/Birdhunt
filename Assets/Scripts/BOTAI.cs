@@ -31,13 +31,10 @@ public class BOTAI : MonoBehaviour
     {
         target = GameObject.Find("FPSController");
     }
-    void Update()
+    void Update() 
     {
         transform.LookAt(target.transform);
-        transform.Translate(Vector3.forward * 5 * Time.deltaTime);
-
-
-
+        transform.Translate(Vector3.forward * 4 * Time.deltaTime);
     }
 
 }
