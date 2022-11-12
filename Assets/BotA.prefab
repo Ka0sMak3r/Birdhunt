@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5446935754444099900}
   - component: {fileID: 5446935754444099896}
   - component: {fileID: 8423216965517134920}
-  - component: {fileID: 7386464162421046339}
+  - component: {fileID: -3686527479712790971}
   m_Layer: 0
   m_Name: BotA
   m_TagString: Birds
@@ -131,7 +131,7 @@ MonoBehaviour:
   target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
   myTransform: {fileID: 5446935754444099899}
   health: 25
---- !u!114 &7386464162421046339
+--- !u!114 &-3686527479712790971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
