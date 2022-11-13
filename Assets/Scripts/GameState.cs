@@ -4,20 +4,10 @@ using UnityEngine.SceneManagement;
 public class GameState : MonoBehaviour
 {
     
-    public void endgame()
+    public void endgame() //Reloads back to the start of the game after the player dies
     {
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void restartgame()
-    {
-        
-        {
-            SceneManager.LoadScene("Arena");
-        }
-        
-
     }
 
 }

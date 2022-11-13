@@ -31,7 +31,7 @@ public class BOTAI : MonoBehaviour
     {
         target = GameObject.Find("FPSController");
     }
-    void Update() 
+    void Update() //Method assigned to the enemy to track the player - https://www.youtube.com/watch?v=6ZkvUu4HFKI
     {
         transform.LookAt(target.transform);
         transform.Translate(Vector3.forward * 4 * Time.deltaTime);

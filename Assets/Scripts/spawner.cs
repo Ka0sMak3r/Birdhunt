@@ -28,7 +28,7 @@ public class spawner : MonoBehaviour
     {
         if (!ActivateSpawn) //checks if the Spawn is not active, if not active, spawns enemies - https://answers.unity.com/questions/52683/how-i-can-call-a-function-once-on-the-update-funct.html
         {
-            int randomNumber = Mathf.RoundToInt(Random.Range(0f, spawn.Length - 1)); //chooses random spawn to spawn enemies
+            int randomNumber = Mathf.RoundToInt(Random.Range(0f, spawn.Length - 1)); //chooses random spawn point to spawn enemies
             Instantiate(bfab, spawn[randomNumber].transform.position, Quaternion.identity); //enemy spawner
             ActivateSpawn = true; 
         }

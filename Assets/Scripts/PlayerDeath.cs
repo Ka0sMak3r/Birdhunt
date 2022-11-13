@@ -12,10 +12,9 @@ public class PlayerDeath : MonoBehaviour
     {
         if (enemyhit.gameObject.CompareTag("Player"))  //checks whether the collider has the tag Player to proceed to the lost screen
         {
-            Debug.Log("Death Check");
             Destroy(enemyhit.gameObject);
             FindObjectOfType<GameState>().endgame(); //Loads the Player Death scene
-            Time.timeScale = 1;
+           
             
         }    
     }
