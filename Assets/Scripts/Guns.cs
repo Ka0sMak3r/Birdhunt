@@ -11,23 +11,27 @@ public class Guns : MonoBehaviour
     private float fireDelay = 0.1f;
     public int magSize = 25;
     private int currentAmmo;
-    public float reloadDelay = 1f;
+    public float reloadDelay = 2.8f;
     private bool isReloading = false;
 
     public Camera gunCam;   //this is a camera reference used for shooting at where the camera is pointing
-    //public ParticleSystem muzzle; //creates a reference for the particle system
-
+    public ParticleSystem muzzle; //creates a reference for the particle system
+    AudioSource fire_sfx; //reference to the audio source attached to assault weapon
+   // public AudioSource reloadsfx;
     //public GameObject hitEffect; //referenced as game object to instantiate in the scene
 
     private void Start()
     {
+        fire_sfx = GetComponent<AudioSource>(); //initialization of audio source object
+        //reloadsfx = GetComponent<AudioSource>();
         currentAmmo = magSize;
     }
     // Update is called once per frame
     void Update()
     {
         if (isReloading)
-            return;
+         return;
+            
 
         if(currentAmmo<=0)//checks if current magazine is empty and triggers reload when empty
         {
@@ -45,13 +49,15 @@ public class Guns : MonoBehaviour
     {
         isReloading = true;
         Debug.Log("Reloading");
+        //reloadsfx.Play();
         yield return new WaitForSeconds(reloadDelay);
         currentAmmo = magSize;
         isReloading = false;
     }
     void Shoot()
     {
-        //muzzle.Play(); //triggers the muzzle particle system after receiving input from the user
+        fire_sfx.Play(); //triggers shooting sound after player shoots weapon
+        muzzle.Play(); //triggers the muzzle particle system after receiving input from the user
         currentAmmo--;
 
         RaycastHit hit; //this variable will store the information about the objects the ray is hitting

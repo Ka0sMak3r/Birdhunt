@@ -11,17 +11,19 @@ public class ShotgunClass : MonoBehaviour
 
     public int magSize = 10;
     private int currentAmmo;
-    public float reloadDelay = 1f;
+    public float reloadDelay = 2.8f;
     private bool isReloading = false;
 
     public GameObject bullet;
     public Transform barrel;
-
+    public ParticleSystem muzzle; //creates a reference for the particle system
+    AudioSource fire; //reference to the audio source attached to shotgun
     List<Quaternion> pellets;
 
     // Start is called before the first frame update
     void Start() 
     {
+        fire = GetComponent<AudioSource>(); //initialization of audio source object
         currentAmmo = magSize;
         pellets = new List<Quaternion>(pelletCount); //Initialises a list of pellets w.r.t the pellet count
         for (int i = 0; i < pelletCount; i++)
@@ -44,6 +46,7 @@ public class ShotgunClass : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             shoot();
+          
         }
     }
     IEnumerator Reload()  //triggers a delay between firing for reloading
@@ -56,6 +59,8 @@ public class ShotgunClass : MonoBehaviour
     }
     void shoot() //function to shoot bullets into the direction of where the barrel is facing
     {
+        muzzle.Play(); //triggers the muzzle particle system after receiving input from the user
+        fire.Play(); //triggers shooting sound after player shoots weapon
         currentAmmo--;
         for (int i = 0; i < pelletCount; i++)
         {
